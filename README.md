@@ -28,3 +28,5 @@ I chose to store the data in a `localDb` instance, so you will also need a SQL S
 
 # Notes
 The automated tests provided will pass on the first run, however additional test runs will start failing as new products created will have a different id than `4` (auto-increment). The hardcoded id of `4` will stop matching the newly created product.
+
+I added only one unit test to show how I would do it. Obviously the solution needs more that than just one.
