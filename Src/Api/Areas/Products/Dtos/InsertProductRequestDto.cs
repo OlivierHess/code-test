@@ -2,7 +2,7 @@
 
 namespace CodeTest.Api.Areas.Products.Dtos
 {
-    public class ProductRequestDto
+    public class InsertProductRequestDto
     {
         [Required]
         public string Name { get; set; }

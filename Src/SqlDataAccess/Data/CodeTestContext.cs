@@ -13,6 +13,9 @@ namespace CodeTest.SqlDataAccess.Data
         public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-            => modelBuilder.Entity<Product>().ToTable("Product");
+        {
+            modelBuilder.Entity<Product>().ToTable("Product");
+            modelBuilder.Entity<Product>().Property(product => product.Price).HasColumnType("decimal(5, 2)");
+        }
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace CodeTest.Api.Areas.Products.Dtos
 {
-    public class ProductResponseDto
+    public class GetProductResponseDto
     {
         public string Name { get; set; }
-        public decimal Price { get; set; }
+        public string Price { get; set; }
     }
 }

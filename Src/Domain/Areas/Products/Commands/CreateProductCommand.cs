@@ -9,8 +9,8 @@ namespace CodeTest.Domain.Areas.Products.Commands
 {
     public record CreateProductCommand : IRequest<Result>
     {
-        public string Name { get; init; }
-        public decimal Price { get; init; }
+        public string ProductName { get; init; }
+        public decimal ProductPrice { get; init; }
     }
 
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Result>
@@ -24,8 +24,8 @@ namespace CodeTest.Domain.Areas.Products.Commands
         {
             var product = new Product
             {
-                Name = command.Name,
-                Price = command.Price
+                Name = command.ProductName,
+                Price = command.ProductPrice
             };
 
             await _productRepository.InsertAsync(product, cancellationToken);

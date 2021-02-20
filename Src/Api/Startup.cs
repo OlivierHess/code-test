@@ -26,7 +26,8 @@ namespace CodeTest.Api
             });
 
             services.AddDbContext<CodeTestContext>(options
-                => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                    => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")))
+                .AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddRepositories();
 
